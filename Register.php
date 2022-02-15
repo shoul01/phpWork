@@ -34,7 +34,6 @@
              }
         }
     ?>
-    <h1>Php in htDocs</h1>
   <input type="checkbox" id="show" class="show" />
 <!-- Title+Button -->
 <label for="show" class="title">sign up<i class="flag left"></i><i class="flag right"></i></label>
