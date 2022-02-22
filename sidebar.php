@@ -14,7 +14,7 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html"> <i class="mdi mdi-account-plus menu-icon"></i> Create new employee</a></li>
+                <li class="nav-item"> <a class="nav-link" href="new_employee.php"> <i class="mdi mdi-account-plus menu-icon"></i> Create new employee</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html"><i class="mdi mdi-run menu-icon"></i> Active employees</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html"><i class="mdi mdi-account-off menu-icon"></i> Banned employees</a></li>
               </ul>
