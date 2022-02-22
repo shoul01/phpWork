@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Skydash Admin</title>
+  <title>HR Management System</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="../../vendors/feather/feather.css">
   <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
@@ -23,6 +23,11 @@
 
   <?php
     include '../../connection.php';
+    session_start();
+
+    if(isset($_SESSION['admin_username'])){
+      header('location: ../../index.php'); 
+    }
 
     if(isset($_POST['signin']))
     {
@@ -33,8 +38,10 @@
       $loginrow = mysqli_fetch_array($loginResult);
       $countloginresult = mysqli_num_rows($loginResult);
 
-      if($countloginresult){
-        $_SESSION['admin_useremail'] = $loginrow['admin_email'];
+      if($countloginresult>0){
+        $_SESSION['admin_username'] = $loginrow['admin_name'];
+        $_SESSION['admin_country'] = $loginrow['admin_country'];
+        $_SESSION['admin_city'] = $loginrow['admin_city'];
         header('location:../../index.php');
       }
       else{
